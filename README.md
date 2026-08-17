@@ -1,8 +1,8 @@
-# 🌌 Dotfiles
+# Dotfiles
 
 Gerenciador de configurações pessoais usando [GNU Stow](https://www.gnu.org/software/stow/).
 
-## 📦 Pacotes Inclusos
+## Pacotes Inclusos
 
 - **`sway`**: Wayland tiling window manager (config, inputs ABNT2/touchpad, lock/suspend script).
 - **`waybar`**: Barra de status modular inferior.
@@ -14,7 +14,7 @@ Gerenciador de configurações pessoais usando [GNU Stow](https://www.gnu.org/so
 
 ---
 
-## 🚀 Instalação Rápida (Bootstrap)
+## Instalação Rápida (Bootstrap)
 
 Clone este repositório e execute o script `bootstrap.sh`:
 
@@ -32,7 +32,7 @@ O script cuidará de:
 
 ---
 
-## 🛠️ Uso Manual com o Stow
+## Uso Manual com o Stow
 
 Caso queira aplicar pacotes individualmente:
 

@@ -43,7 +43,7 @@ log_error() {
 print_banner() {
     echo -e "${CYAN}"
     echo "=================================================="
-    echo "       🚀 Inicializador de Dotfiles (Stow)        "
+    echo "          Inicializador de Dotfiles (Stow)        "
     echo "=================================================="
     echo -e "${NC}"
 }
@@ -239,7 +239,7 @@ main() {
     esac
 
     echo ""
-    log_success "🎉 Configuração finalizada com sucesso!"
+    log_success "Configuração finalizada com sucesso!"
 }
 
 main "$@"
