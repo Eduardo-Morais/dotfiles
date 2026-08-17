@@ -1,0 +1,270 @@
+* {
+    font-family: 'JetBrainsMono Nerd Font', 'Font Awesome 6 Free', 'Noto Sans', sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #1e1e2e;
+    border-top: 1px solid #313244;
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Base button resets for waybar */
+button {
+    box-shadow: none;
+    border: none;
+    border-radius: 6px;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: none;
+}
+
+/* Workspaces */
+#workspaces {
+    background-color: #181825;
+    margin: 3px 4px;
+    padding: 1px 2px;
+    border-radius: 8px;
+    border: 1px solid #313244;
+}
+
+#workspaces button {
+    padding: 1px 8px;
+    margin: 2px 2px;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #a6adc8;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: #313244;
+    color: #cdd6f4;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: #89b4fa;
+    color: #11111b;
+    font-weight: 800;
+}
+
+#workspaces button.urgent {
+    background-color: #f38ba8;
+    color: #11111b;
+}
+
+/* Common pill module styling */
+#mode,
+#scratchpad,
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#backlight,
+#language,
+#battery,
+#clock,
+#tray {
+    padding: 2px 9px;
+    margin: 3px 2px;
+    border-radius: 8px;
+}
+
+/* Hover effects with GTK-compatible box-shadow */
+#idle_inhibitor:hover,
+#pulseaudio:hover,
+#network:hover,
+#power-profiles-daemon:hover,
+#cpu:hover,
+#memory:hover,
+#backlight:hover,
+#language:hover,
+#battery:hover,
+#clock:hover,
+#mode:hover,
+#scratchpad:hover {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+/* Sway Mode & Scratchpad */
+#mode {
+    background-color: #f38ba8;
+    color: #11111b;
+    font-weight: 800;
+}
+
+#scratchpad {
+    background-color: #313244;
+    color: #cdd6f4;
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+/* Idle Inhibitor */
+#idle_inhibitor {
+    background-color: #313244;
+    color: #a6adc8;
+    padding: 2px 8px;
+    min-width: 14px;
+}
+
+#idle_inhibitor.activated {
+    background-color: #fab387;
+    color: #11111b;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+    background-color: #fab387;
+    color: #11111b;
+}
+
+#pulseaudio.muted {
+    background-color: #45475a;
+    color: #a6adc8;
+}
+
+/* Network */
+#network {
+    background-color: #89dceb;
+    color: #11111b;
+}
+
+#network.disconnected {
+    background-color: #f38ba8;
+    color: #11111b;
+}
+
+/* Power Profiles Daemon */
+#power-profiles-daemon {
+    background-color: #89b4fa;
+    color: #11111b;
+    padding: 2px 8px;
+    min-width: 14px;
+}
+
+#power-profiles-daemon.performance {
+    background-color: #f38ba8;
+    color: #11111b;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: #89b4fa;
+    color: #11111b;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: #a6e3a1;
+    color: #11111b;
+}
+
+/* CPU */
+#cpu {
+    background-color: #a6e3a1;
+    color: #11111b;
+}
+
+/* Memory */
+#memory {
+    background-color: #cba6f7;
+    color: #11111b;
+}
+
+/* Backlight */
+#backlight {
+    background-color: #f9e2af;
+    color: #11111b;
+}
+
+/* Sway Language Layout */
+#language {
+    background-color: #94e2d5;
+    color: #11111b;
+    min-width: 16px;
+}
+
+/* Battery */
+#battery {
+    background-color: #a6e3a1;
+    color: #11111b;
+}
+
+#battery.charging,
+#battery.plugged {
+    background-color: #94e2d5;
+    color: #11111b;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #f9e2af;
+    color: #11111b;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f38ba8;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #11111b;
+    }
+}
+
+/* Clock */
+#clock {
+    background-color: #b4befe;
+    color: #11111b;
+    font-weight: 800;
+}
+
+/* System Tray */
+#tray {
+    background-color: #313244;
+    padding: 2px 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #f38ba8;
+}
+
+/* Tooltip */
+tooltip {
+    background: #181825;
+    border: 1px solid #45475a;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+tooltip label {
+    color: #cdd6f4;
+    font-size: 11px;
+}
