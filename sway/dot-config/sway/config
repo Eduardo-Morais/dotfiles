@@ -103,6 +103,9 @@ input "type:touchpad" {
 
     # Start Firefox
     bindsym $mod+Shift+f exec firefox
+    
+    # Take a printscreen
+    bindsym Shift+Print exec grimshot copy area
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
