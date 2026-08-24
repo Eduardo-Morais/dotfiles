@@ -33,7 +33,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /usr/share/backgrounds/default-dark.jxl fill
+output * bg /home/eduardo/dotfiles/images/wallhaven-7jlm7o.png fill
 #
 # Example configuration:
 #
@@ -103,10 +103,8 @@ input "type:touchpad" {
 
     # Start Firefox
     bindsym $mod+Shift+f exec firefox
-    
-    # Take a printscreen
-    bindsym Shift+Print exec grimshot copy area
 
+    bindsym Shift+Print exec grimshot copy area
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
