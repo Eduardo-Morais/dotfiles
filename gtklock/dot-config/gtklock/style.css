@@ -40,6 +40,32 @@ window {
     letter-spacing: 0.5px;
 }
 
+#input-label {
+    opacity: 0;
+    font-size: 0px;
+    min-width: 0px;
+    min-height: 0px;
+    padding: 0px;
+    margin: 0px;
+    color: transparent;
+    text-shadow: none;
+}
+
+#unlock-button {
+    opacity: 0;
+    font-size: 0px;
+    min-width: 0px;
+    min-height: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+}
+
 #input-field {
     border-radius: 14px;
     padding: 14px 22px;
