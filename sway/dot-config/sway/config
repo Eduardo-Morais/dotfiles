@@ -33,7 +33,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /home/eduardo/dotfiles/images/wallhaven-7jlm7o.png fill
+output * bg /home/eduardo/projetos/dotfiles/images/wallhaven-7jlm7o.png fill
 #
 # Example configuration:
 #
@@ -116,7 +116,7 @@ input "type:touchpad" {
     bindsym $mod+Shift+c reload
 
     # Lock screen & Suspend (Super + Escape - Bloquear tela e suspender sistema)
-    bindsym $mod+Escape exec ~/.config/sway/lock.sh --suspend
+    bindsym --release $mod+Escape exec ~/.config/sway/lock.sh --suspend
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
